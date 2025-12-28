@@ -4,8 +4,60 @@ title: "CSU - Soil Science"
 
 ## Welcome to the official website of CSU-Soil Science Division!
 
-You can check out our News Feed to be updated of all our activities.
+You can check out our [News Feed](blog.qmd) to be updated of all our activities.
 
 You can also check here the profile of our faculty members!
 
-(design grid style with photo of team here)
+## Meet the Team
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: asis
+
+library(readxl)
+team_data <- read_excel("data.xlsx")
+
+cat('<div class="grid">')
+
+for(i in 1:nrow(team_data)) {
+  person <- team_data[i, ]
+  
+  # Image check logic
+  photo_path <- paste0("images/team/", person$Photo)
+  if (!file.exists(photo_path) | is.na(person$Photo)) {
+    display_photo <- paste0("[https://ui-avatars.com/api/?name=](https://ui-avatars.com/api/?name=)", 
+                            URLencode(person$Name), 
+                            "&background=random&rounded=true")
+  } else {
+    display_photo <- photo_path
+  }
+
+  cat(paste0(
+    '<div class="g-col-12 g-col-md-4 g-col-lg-3">',
+      '<div class="flip-card">',
+        '<div class="flip-card-inner">',
+          
+          # FRONT: Photo and Name Only
+          '<div class="flip-card-front">',
+            '<img src="', display_photo, '" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">',
+            '<h4>', person$Name, '</h4>',
+          '</div>',
+          
+          # BACK: Role, Bio, and Email
+          '<div class="flip-card-back">',
+            '<h5 class="mb-1">', person$Role, '</h5>',
+            '<p class="small">', person$Bio, '</p>',
+            '<hr style="width: 50%; border-color: white; margin: 10px auto;">',
+            '<a href="mailto:', person$Email, '" style="color: #abdbe3;">', person$Email, '</a>',
+          '</div>',
+          
+        '</div>',
+      '</div>',
+    '</div>'
+  ))
+}
+
+cat('</div>')
+```

@@ -1,1 +1,105 @@
-/* css styles */
+/* Import fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap');
+
+/* Main body text */
+body {
+  font-family: 'Avenir', sans-serif;
+  color: #333;
+}
+
+/* Headers */
+h1, h2, h3, h4, .navbar-brand {
+  font-family: 'Avenir', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.5px; /* Makes sans-serif headers look tighter/cleaner */
+  color: #1a1a1a;
+}
+
+/* Make links look clean */
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+```css
+/* Staff Card Styling */
+.card {
+  transition: transform 0.2s ease-in-out;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Card lifts up when hovered */
+}
+
+.card-title {
+  font-family: 'Avenir', sans-serif; /* Your sans-serif font */
+  margin-bottom: 0.2rem;
+}
+
+.card-text {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* The flip card container */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 350px; /* Adjust height as needed */
+  perspective: 1000px; /* Gives the 3D effect */
+  margin-bottom: 20px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Style the front side */
+.flip-card-front {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #2c3e50; /* Matches your hero color */
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}

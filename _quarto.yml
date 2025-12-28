@@ -19,6 +19,7 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
-
-
-
+    grid:
+      sidebar-width: 270px    # Narrower left sidebar (default is ~250-300px)
+      margin-width: 130px     # Narrower right sidebar (TOC/Margin)
+      body-width: 1100px      # Much wider center panel

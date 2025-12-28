@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "CSU - Soil Science",
     "section": "",
-    "text": "You can check out our News Feed to be updated of all our activities.\nYou can also check here the profile of our faculty members!\n(design grid style with photo of team here)",
+    "text": "You can check out our News Feed to be updated of all our activities.\nYou can also check here the profile of our faculty members!",
     "crumbs": [
       "Home"
     ]
@@ -52,9 +52,26 @@
     "href": "index.html#welcome-to-the-official-website-of-csu-soil-science-division",
     "title": "CSU - Soil Science",
     "section": "",
-    "text": "You can check out our News Feed to be updated of all our activities.\nYou can also check here the profile of our faculty members!\n(design grid style with photo of team here)",
+    "text": "You can check out our News Feed to be updated of all our activities.\nYou can also check here the profile of our faculty members!",
     "crumbs": [
       "Home"
     ]
+  },
+  {
+    "objectID": "index.html#meet-the-team",
+    "href": "index.html#meet-the-team",
+    "title": "CSU - Soil Science",
+    "section": "Meet the Team",
+    "text": "Meet the Team\n\n\n\n\n\n\n\nSharyl\n\n\n\n\nInstructor 1\n\n\nSharyl Mae Daverao\n\n\n\n\n\n\n\n\n\n\n\n\n\nHazel\n\n\n\n\nInstructor 1\n\n\nHazel Fuertes\n\n\n\n\n\n\n\n\n\n\n\n\n\nGlenn\n\n\n\n\nAssociate Professor V\n\n\nGlenn Arthur Garcia\n\n\n\n\n\n\n\n\n\n\n\n\n\nLyka\n\n\n\n\nInstructor 1\n\n\nAngelica Labiano\n\n\n\n\n\n\n\n\n\n\n\n\n\nIanil\n\n\n\n\nInstructor 1\n\n\nIanil Manguruban\n\n\n\n\n\n\n\n\n\n\n\n\n\nJames\n\n\n\n\nAssociate Professor V\n\n\nReuben James Rollon\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrances\n\n\n\n\nAssistant Professor I\n\n\nFrances Mae Pizon\n\n\n\n\n\n\n\n\n\n\n\n\n\nJude\n\n\n\n\nAssistant Professor IV\n\n\nLeo Jude Villasica",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "posts/index.html#a-new-beginning",
+    "href": "posts/index.html#a-new-beginning",
+    "title": "Website Launch",
+    "section": "",
+    "text": "We are excited to announce the launch of our new internal database…"
   }
 ]

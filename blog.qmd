@@ -3,7 +3,9 @@ title: "News Feed"
 listing:
   contents: posts          # Tells Quarto to look in the "posts" folder
   sort: "date desc"        # Newest posts first
-  type: default            # Options: default, grid, or table
+  type: grid            # Options: default, grid, or table
+  sort-ui: true
+  filter-ui: true
   categories: true         # Adds a sidebar with tags/categories
 ---
 
