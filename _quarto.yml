@@ -3,12 +3,16 @@ project:
   output-dir: docs
 
 website:
-  title: "Soil Science Caraga"
-  navbar:
-    left:
+  title: "Soil Science Division"
+  sidebar:
+    logo: ssc.png
+    favicon: soils.png
+    search: true
+    contents:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: blog.qmd
+        text: News Feed
 
 format:
   html:

@@ -4,7 +4,10 @@
     "href": "index.html",
     "title": "Soil Science Caraga",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Welcome!",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "about.html",
@@ -12,5 +15,36 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "News Feed",
+    "section": "",
+    "text": "Welcome to our division news feed. Here you will find our latest updates.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWebsite Launch\n\n\n\n\n\n\nsidequest\n\n\nprojects\n\n\n\n\n\n\n\n\n\nDec 28, 2025\n\n\nVillasica LJ\n\n\n\n\n\n\n\n\n\n\n\n\nNew Project Launch\n\n\n\n\n\n\nresearch\n\n\nextension\n\n\n\n\n\n\n\n\n\nDec 28, 2025\n\n\nVillasica LJ\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "News Feed"
+    ]
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Website Launch",
+    "section": "",
+    "text": "We are excited to announce the launch of our new internal database…"
+  },
+  {
+    "objectID": "posts/post2.html",
+    "href": "posts/post2.html",
+    "title": "New Project Launch",
+    "section": "",
+    "text": "SSD faculty conducts carbon capture in rice farms. more content to follow."
+  },
+  {
+    "objectID": "posts/post2.html#capturing-carbon-in-rice-fields",
+    "href": "posts/post2.html#capturing-carbon-in-rice-fields",
+    "title": "New Project Launch",
+    "section": "",
+    "text": "SSD faculty conducts carbon capture in rice farms. more content to follow."
   }
 ]
