@@ -5,7 +5,7 @@ project:
 website:
   title: "Soil Science Division"
   sidebar:
-    logo: ssc.png
+    logo: soils.png
     favicon: soils.png
     search: true
     contents:

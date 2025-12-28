@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Soil Science Caraga",
+    "title": "CSU - Soil Science",
     "section": "",
-    "text": "Welcome!",
+    "text": "Welcome to the official Website of CSU-Soil Science Division!\nYou can check out our News Feed to be updated of all our activities.\nYou can also check here the profile of our faculty members!\n(design grid style with photo of team here)",
     "crumbs": [
       "Home"
     ]
@@ -21,7 +21,7 @@
     "href": "blog.html",
     "title": "News Feed",
     "section": "",
-    "text": "Welcome to our division news feed. Here you will find our latest updates.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWebsite Launch\n\n\n\n\n\n\nsidequest\n\n\nprojects\n\n\n\n\n\n\n\n\n\nDec 28, 2025\n\n\nVillasica LJ\n\n\n\n\n\n\n\n\n\n\n\n\nNew Project Launch\n\n\n\n\n\n\nresearch\n\n\nextension\n\n\n\n\n\n\n\n\n\nDec 28, 2025\n\n\nVillasica LJ\n\n\n\n\n\n\nNo matching items",
+    "text": "Welcome to our division news feed. Here you will find our latest updates.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNew Project Launch\n\n\n\n\n\n\nresearch\n\n\nextension\n\n\n\n\n\n\n\n\n\nDec 28, 2025\n\n\nVillasica LJ\n\n\n\n\n\n\n\n\n\n\n\n\nWebsite Launch\n\n\n\n\n\n\nsidequest\n\n\nprojects\n\n\n\n\n\n\n\n\n\nDec 27, 2025\n\n\nVillasica LJ\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "News Feed"
     ]
@@ -46,5 +46,15 @@
     "title": "New Project Launch",
     "section": "",
     "text": "SSD faculty conducts carbon capture in rice farms. more content to follow."
+  },
+  {
+    "objectID": "index.html#welcome-to-the-official-website-of-csu-soil-science-division",
+    "href": "index.html#welcome-to-the-official-website-of-csu-soil-science-division",
+    "title": "CSU - Soil Science",
+    "section": "",
+    "text": "You can check out our News Feed to be updated of all our activities.\nYou can also check here the profile of our faculty members!\n(design grid style with photo of team here)",
+    "crumbs": [
+      "Home"
+    ]
   }
 ]

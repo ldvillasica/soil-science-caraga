@@ -1,5 +1,11 @@
 ---
-title: "Soil Science Caraga"
+title: "CSU - Soil Science"
 ---
 
-# Welcome!
+## Welcome to the official website of CSU-Soil Science Division!
+
+You can check out our News Feed to be updated of all our activities.
+
+You can also check here the profile of our faculty members!
+
+(design grid style with photo of team here)
