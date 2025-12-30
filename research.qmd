@@ -1,0 +1,84 @@
+---
+title: "Research Dashboard"
+format: html
+editor: visual
+---
+
+## By the Numbers
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(googlesheets4)
+library(dplyr)
+library(DT)
+library(ggplot2)
+library(plotly)
+
+# 1. SETUP & READ DATA
+gs4_deauth()
+sheet_id <- "1reSknnI2NfaYGdCovLiXL7rgnjXCJjLsgrc5rQ39xyw" # Replace with your ID
+res_data <- read_sheet(sheet_id, sheet = "Research")
+
+# 2. CALCULATE DASHBOARD STATS
+total_projects   <- nrow(res_data)
+ongoing_projects <- sum(res_data$Status == "Ongoing", na.rm = TRUE)
+total_funding    <- sum(as.numeric(res_data$Funding_Amount), na.rm = TRUE)
+```
+
+## Faculty Research Overview
+
+::::::::: grid
+:::: {.g-col-12 .g-col-md-4}
+::: {.card .text-center .p-3 .bg-light .shadow-sm}
+**Total Projects**
+
+## `r total_projects`
+:::
+::::
+
+:::: {.g-col-12 .g-col-md-4}
+::: {.card .text-center .p-3 .bg-light .shadow-sm}
+**Ongoing Research**
+
+## `r ongoing_projects`
+:::
+::::
+
+:::: {.g-col-12 .g-col-md-4}
+::: {.card .text-center .p-3 .bg-light .shadow-sm}
+**Total Funding**
+
+## Php `r format(total_funding, big.mark=",", nsmall = 2, scientific = FALSE, )`
+:::
+::::
+:::::::::
+
+## Research Distribution by Status
+
+```{r}
+#| echo: false
+# Create the bar chart
+p <- ggplot(res_data, aes(x = Status, fill = Status)) +
+  geom_bar() +
+  theme_minimal() +
+  labs(y = "Count", x = "") +
+  scale_fill_brewer(palette = "Set2") + # Makes the colors look professional
+  theme(legend.position = "none")
+
+# Convert to interactive plotly chart
+ggplotly(p)
+```
+
+## Project Search Directory
+
+```{r}
+#| echo: false
+# Create the searchable table
+datatable(res_data, 
+          filter = 'top', 
+          options = list(pageLength = 10, autoWidth = TRUE, scrollX = TRUE),
+          class = 'cell-border stripe')
+```

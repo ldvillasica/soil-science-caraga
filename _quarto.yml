@@ -5,7 +5,7 @@ project:
 website:
   title: "Soil Science Division"
   sidebar:
-    logo: soils.png
+    logo: ssc.png
     favicon: soils.png
     search: true
     contents:
@@ -13,6 +13,13 @@ website:
         text: Home
       - href: blog.qmd
         text: News Feed
+      - href: research.qmd
+        text: Research Dashboard
+  page-footer:
+    background: light # Options: light, dark, or a specific hex color
+    border: true
+    center: |
+      Made with <i class="bi bi-heart-fill" style="color: #e25555;"></i> by the <img src="soils.png" alt="Logo" style="height:150px; vertical-align:middle; margin: 0 5px;"> Team
 
 format:
   html:

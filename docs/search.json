@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "CSU - Soil Science",
+    "title": "Soil Science Caraga",
     "section": "",
     "text": "You can check out our News Feed to be updated of all our activities.\nYou can also check here the profile of our faculty members!",
     "crumbs": [
@@ -50,7 +50,7 @@
   {
     "objectID": "index.html#welcome-to-the-official-website-of-csu-soil-science-division",
     "href": "index.html#welcome-to-the-official-website-of-csu-soil-science-division",
-    "title": "CSU - Soil Science",
+    "title": "Soil Science Caraga",
     "section": "",
     "text": "You can check out our News Feed to be updated of all our activities.\nYou can also check here the profile of our faculty members!",
     "crumbs": [
@@ -60,9 +60,9 @@
   {
     "objectID": "index.html#meet-the-team",
     "href": "index.html#meet-the-team",
-    "title": "CSU - Soil Science",
+    "title": "Soil Science Caraga",
     "section": "Meet the Team",
-    "text": "Meet the Team\n\n\n\n\n\n\n\nSharyl\n\n\n\n\nInstructor 1\n\n\nSharyl Mae Daverao\n\n\n\n\n\n\n\n\n\n\n\n\n\nHazel\n\n\n\n\nInstructor 1\n\n\nHazel Fuertes\n\n\n\n\n\n\n\n\n\n\n\n\n\nGlenn\n\n\n\n\nAssociate Professor V\n\n\nGlenn Arthur Garcia\n\n\n\n\n\n\n\n\n\n\n\n\n\nLyka\n\n\n\n\nInstructor 1\n\n\nAngelica Labiano\n\n\n\n\n\n\n\n\n\n\n\n\n\nIanil\n\n\n\n\nInstructor 1\n\n\nIanil Manguruban\n\n\n\n\n\n\n\n\n\n\n\n\n\nJames\n\n\n\n\nAssociate Professor V\n\n\nReuben James Rollon\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrances\n\n\n\n\nAssistant Professor I\n\n\nFrances Mae Pizon\n\n\n\n\n\n\n\n\n\n\n\n\n\nJude\n\n\n\n\nAssistant Professor IV\n\n\nLeo Jude Villasica",
+    "text": "Meet the Team\n\n\n\n\n\n\n\nSharyl\n\n\n\n\nInstructor 1\n\n\nSharyl Mae Daverao: soil chemistry, soil health\n\n\n\n\n\n\n\n\n\n\n\n\n\nHazel\n\n\n\n\nInstructor 1\n\n\nHazel Fuertes: soil chemistry, soil health\n\n\n\n\n\n\n\n\n\n\n\n\n\nGlenn\n\n\n\n\nAssociate Professor V\n\n\nGlenn Arthur Garcia: pedology, soil fertility\n\n\n\n\n\n\n\n\n\n\n\n\n\nLyka\n\n\n\n\nInstructor 1\n\n\nAngelica Labiano: soil chemistry, soil physics\n\n\n\n\n\n\n\n\n\n\n\n\n\nIanil\n\n\n\n\nInstructor 1\n\n\nIanil Manguruban: soil fertility\n\n\n\n\n\n\n\n\n\n\n\n\n\nJames\n\n\n\n\nAssociate Professor V\n\n\nReuben James Rollon: soil microbiology, soil fertility\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrances\n\n\n\n\nAssistant Professor I\n\n\nFrances Mae Pizon: soil chemistry, soil fertility\n\n\n\n\n\n\n\n\n\n\n\n\n\nJude\n\n\n\n\nAssistant Professor IV\n\n\nLeo Jude Villasica: soil physics, soil health",
     "crumbs": [
       "Home"
     ]
@@ -73,5 +73,75 @@
     "title": "Website Launch",
     "section": "",
     "text": "We are excited to announce the launch of our new internal database…"
+  },
+  {
+    "objectID": "research.html#faculty-research-overview",
+    "href": "research.html#faculty-research-overview",
+    "title": "Research Dashboard",
+    "section": "Faculty Research Overview",
+    "text": "Faculty Research Overview\n\n\n\nTotal Projects\n\n4\n\n\n\n\n\nOngoing Research\n\n2\n\n\n\n\n\nTotal Funding\n\nPhp 12,253,990.00",
+    "crumbs": [
+      "Research Dashboard"
+    ]
+  },
+  {
+    "objectID": "research.html#section",
+    "href": "research.html#section",
+    "title": "Research Dashboard",
+    "section": "4",
+    "text": "4",
+    "crumbs": [
+      "Research Dashboard"
+    ]
+  },
+  {
+    "objectID": "research.html#section-1",
+    "href": "research.html#section-1",
+    "title": "Research Dashboard",
+    "section": "2",
+    "text": "2",
+    "crumbs": [
+      "Research Dashboard"
+    ]
+  },
+  {
+    "objectID": "research.html#section-2",
+    "href": "research.html#section-2",
+    "title": "Research and Development Dashboard",
+    "section": "$12,253,990",
+    "text": "$12,253,990",
+    "crumbs": [
+      "Research and Development"
+    ]
+  },
+  {
+    "objectID": "research.html#research-distribution-by-status",
+    "href": "research.html#research-distribution-by-status",
+    "title": "Research Dashboard",
+    "section": "Research Distribution by Status",
+    "text": "Research Distribution by Status",
+    "crumbs": [
+      "Research Dashboard"
+    ]
+  },
+  {
+    "objectID": "research.html#project-search-directory",
+    "href": "research.html#project-search-directory",
+    "title": "Research Dashboard",
+    "section": "Project Search Directory",
+    "text": "Project Search Directory",
+    "crumbs": [
+      "Research Dashboard"
+    ]
+  },
+  {
+    "objectID": "research.html#php-12253990.00",
+    "href": "research.html#php-12253990.00",
+    "title": "Research Dashboard",
+    "section": "Php 12,253,990.00",
+    "text": "Php 12,253,990.00",
+    "crumbs": [
+      "Research Dashboard"
+    ]
   }
 ]

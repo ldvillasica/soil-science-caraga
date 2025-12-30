@@ -1,5 +1,5 @@
 ---
-title: "CSU - Soil Science"
+title: "Soil Science Caraga"
 ---
 
 ## Welcome to the official website of CSU-Soil Science Division!
@@ -16,19 +16,28 @@ You can also check here the profile of our faculty members!
 #| warning: false
 #| results: asis
 
-library(readxl)
-team_data <- read_excel("data.xlsx")
+library(googlesheets4)
+library(dplyr)
+
+# 1. SETUP: Tell R we are accessing a PUBLIC sheet (no login required)
+gs4_deauth()
+sheet_id <- "1reSknnI2NfaYGdCovLiXL7rgnjXCJjLsgrc5rQ39xyw" # Replace with your ID
+
+# 2. READ DATA: Pull the 'Staff' tab
+# Make sure your Google Sheet tab is named exactly "Staff"
+team_data <- read_sheet(sheet_id, sheet = "Staff")
 
 cat('<div class="grid">')
 
 for(i in 1:nrow(team_data)) {
   person <- team_data[i, ]
   
-  # Image check logic
+  # Image check logic: Uses placeholder if image column is empty
   photo_path <- paste0("images/team/", person$Photo)
-  if (!file.exists(photo_path) | is.na(person$Photo)) {
+  
+  if (is.na(person$Photo) || !file.exists(photo_path)) {
     display_photo <- paste0("[https://ui-avatars.com/api/?name=](https://ui-avatars.com/api/?name=)", 
-                            URLencode(person$Name), 
+                            URLencode(as.character(person$Name)), 
                             "&background=random&rounded=true")
   } else {
     display_photo <- photo_path
@@ -39,7 +48,7 @@ for(i in 1:nrow(team_data)) {
       '<div class="flip-card">',
         '<div class="flip-card-inner">',
           
-          # FRONT: Photo and Name Only
+          # FRONT: Photo and Name
           '<div class="flip-card-front">',
             '<img src="', display_photo, '" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">',
             '<h4>', person$Name, '</h4>',
@@ -47,7 +56,7 @@ for(i in 1:nrow(team_data)) {
           
           # BACK: Role, Bio, and Email
           '<div class="flip-card-back">',
-            '<h5 class="mb-1">', person$Role, '</h5>',
+            '<h5 class="mb-1">', person$Role, '</h5>', 
             '<p class="small">', person$Bio, '</p>',
             '<hr style="width: 50%; border-color: white; margin: 10px auto;">',
             '<a href="mailto:', person$Email, '" style="color: #abdbe3;">', person$Email, '</a>',
