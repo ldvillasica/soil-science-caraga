@@ -1,3 +1,0 @@
-# This tells all files in this folder to use the website's layout
-freeze: true
-# Ensure it doesn't try to override the main site format
