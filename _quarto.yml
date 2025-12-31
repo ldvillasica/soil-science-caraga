@@ -30,6 +30,3 @@ format:
       sidebar-width: 270px    # Narrower left sidebar (default is ~250-300px)
       margin-width: 130px     # Narrower right sidebar (TOC/Margin)
       body-width: 1100px      # Much wider center panel
-    include-in-header:
-      text: |
-        <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_163e0eed8c09ddd45c012c0fa35c29"></script>
