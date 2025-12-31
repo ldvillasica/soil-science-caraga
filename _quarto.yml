@@ -20,6 +20,17 @@ website:
         text: News Feed
       - href: research.qmd
         text: Research Dashboard
+    footer: 
+      - |
+        ::: {.address-sidebar}
+        *Where to find us?*
+        
+        **College of Agriculture and**
+        **Agri-Industries (CAA)**
+        **Caraga State University (CSU)**
+        Butuan City, Agusan del Norte, Philippines 8600  
+        [Contact Us](https://www.facebook.com/profile.php?id=61565692704014)
+        :::
   page-footer:
     background: light # Options: light, dark, or a specific hex color
     border: true

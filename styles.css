@@ -232,3 +232,98 @@ a {
 .btn-feed:active {
   transform: translateY(0);
 }
+
+/* --- NEWS FEED / GRID STYLING --- */
+
+/* 1. Fix the Title: Remove All-Caps, Increase Size, and Add Color */
+.quarto-listing-container-grid .listing-title {
+  text-transform: none !important; /* This stops the all-caps */
+  font-weight: 700 !important;    /* Makes it bold/emphasized */
+  font-size: 1.3rem !important;   /* Larger heading size */
+  color: #3d2b1f !important;      /* Rich Dark Brown */
+  line-height: 1.2;
+  margin-top: 10px;
+  display: block;
+}
+
+/* 2. Style the Card specifically */
+.quarto-grid-item {
+  border: 1px solid #e5e0d8 !important; /* Light earthy border */
+  border-radius: 8px !important;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+  background-color: #ffffff;
+}
+
+/* 3. Hover Effect: Make the card "lift" when mouse is over it */
+.quarto-grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(61, 43, 31, 0.1); /* Brownish shadow */
+  border-color: #3d2b1f !important;
+}
+
+/* 4. Style the Metadata (Date and Author) */
+.listing-author, .listing-date {
+  color: #7d6b5d !important; /* Muted brown-gray */
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 5. Style the Categories (the small pills) */
+.listing-categories .listing-category {
+  background-color: #f0ebe5 !important; /* Light sand color */
+  color: #5d4037 !important;           /* Medium brown text */
+  border: 1px solid #dcd3c9 !important;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+/* --- FIX CONTENT PREVIEW (DESCRIPTION) --- */
+
+.quarto-listing-container-grid .listing-description, 
+.quarto-listing-container-grid .listing-subtitle {
+  text-transform: none !important;    /* Forces normal sentence case */
+  font-variant: normal !important;    /* Disables "Small Caps" if active */
+  color: #5d4037 !important;          /* Medium Earthy Brown */
+  font-size: 0.95rem !important;      /* Slightly smaller than the title */
+  line-height: 1.5;                   /* Better readability for paragraphs */
+  margin-top: 8px;
+  display: block;
+}
+
+/* Optional: Make the "Read More" or text links brown too */
+.quarto-listing-container-grid a {
+  color: #3d2b1f; 
+  text-decoration: none;
+}
+
+/* --- SIDEBAR ADDRESS STYLING --- */
+.address-sidebar {
+  font-size: 0.82em;          /* Slightly smaller for a footer look */
+  color: #5d4037;             /* Medium Brown */
+  line-height: 1.5;
+  padding: 15px 10px;
+  border-top: 1px solid #e5e0d8; /* Light earth-tone separator */
+  margin-top: 20px;
+}
+
+.address-sidebar strong {
+  color: #3d2b1f;             /* Dark Brown for the name */
+  display: block;
+  margin-bottom: 5px;
+}
+
+.address-sidebar a {
+  color: #8d6e63;             /* Lighter brown for the link */
+  text-decoration: underline;
+}
+
+.address-sidebar a:hover {
+  color: #3d2b1f;
+}
+
+/* Optional: Style the Bootstrap icon */
+.address-sidebar i {
+  margin-right: 5px;
+  color: #3d2b1f;
+}
