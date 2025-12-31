@@ -116,3 +116,26 @@ a {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
+
+/* --- LYKET BUTTON STYLING --- */
+#lyket-wrapper {
+  clear: both;
+  display: block;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto !important;
+}
+
+/* This targets the Lyket button specifically */
+[data-lyket-type="like"] {
+  display: inline-block !important;
+  cursor: pointer !important;
+  margin-top: 10px;
+}
+
+/* Optional: Make the "Like" text a bit nicer */
+#lyket-wrapper p {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #2c3e50; /* Matches your professional theme */
+}

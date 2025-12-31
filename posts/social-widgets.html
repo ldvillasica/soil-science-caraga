@@ -1,0 +1,22 @@
+<div id="lyket-wrapper" style="margin: 40px auto; padding-top: 20px; border-top: 1px solid #eee; text-align: center;">
+  <p style="font-size: 0.9em; color: #666; font-style: italic;">Like this story?</p>
+  
+  <div 
+    data-lyket-type="like" 
+    data-lyket-id="auto" 
+    data-lyket-namespace="blog"
+    data-lyket-template="twitter"
+  ></div>
+</div>
+
+<script>
+window.addEventListener("load", function() {
+  var lyketBtn = document.getElementById('lyket-wrapper');
+  var postContent = document.querySelector('main.content') || 
+                    document.querySelector('article');
+  
+  if (lyketBtn && postContent) {
+    postContent.appendChild(lyketBtn);
+  }
+});
+</script>

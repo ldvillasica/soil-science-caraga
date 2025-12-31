@@ -4,7 +4,9 @@ title: "Soil Science Caraga"
 
 ## Welcome to the official website of CSU-Soil Science Division!
 
-::: callout-important
+::: callout-note
+## What to do here?
+
 You can check out our [News Feed](blog.qmd) to be updated of all our activities.
 
 You can also check here the profile of our faculty members!

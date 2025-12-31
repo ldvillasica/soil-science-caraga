@@ -1,0 +1,4 @@
+# Inside /posts/_metadata.yml
+format:
+  html:
+    include-after-body: social-widgets.html
