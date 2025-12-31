@@ -6,6 +6,9 @@ project:
 
 website:
   title: "Soil Science Division"
+  bread-crumbs: true
+  back-to-top-navigation: true
+  page-navigation: true
   sidebar:
     logo: ssc.png
     favicon: soils.png

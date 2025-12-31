@@ -139,3 +139,96 @@ a {
   font-weight: 500;
   color: #2c3e50; /* Matches your professional theme */
 }
+
+/* --- 1. READING TIME BADGE --- */
+#reading-time-badge {
+  font-size: 0.85em;
+  color: #666;
+  background: #f4f4f4;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+/* --- 2. SOCIAL SHARE BUTTONS --- */
+.share-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.share-link {
+  color: #555;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.2s;
+}
+
+.share-link:hover {
+  color: #007bff; /* Changes to blue on hover */
+}
+
+.share-text {
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Navigation Row (Top and Bottom) */
+.post-nav-header {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.post-nav-footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.btn-news-feed {
+  font-size: 0.9em;
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-news-feed:hover {
+  color: #007bff;
+}
+
+/* --- RETURN TO FEED BUTTON --- */
+.feed-nav-container {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.btn-feed {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #2c3e50; /* Professional Navy */
+  color: #ffffff !important;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  border: none;
+}
+
+.btn-feed:hover {
+  background-color: #34495e;
+  transform: translateY(-2px);
+  color: #ffffff !important;
+}
+
+.btn-feed:active {
+  transform: translateY(0);
+}

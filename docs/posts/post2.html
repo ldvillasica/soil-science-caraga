@@ -184,29 +184,72 @@ ul.task-list li input[type="checkbox"] {
 
 </section>
 
-</main> <!-- /main -->
-<div id="lyket-wrapper" style="margin: 40px auto; padding-top: 20px; border-top: 1px solid #eee; text-align: center;">
-  <p style="font-size: 0.9em; color: #666; font-style: italic;">Like this story? Give it a heart!</p>
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<div id="reading-time-container" style="display: none;">
+  <span id="reading-time-badge" style="font-size: 0.85em; color: #666; background: #f4f4f4; padding: 4px 12px; border-radius: 20px; border: 1px solid #ddd; display: inline-block; margin-bottom: 20px;">
+    ⏳ <span id="time-val">0</span> min read
+  </span>
+</div>
+
+<div id="bottom-widgets" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee; text-align: center; display: none;">
+  
+  <div style="margin-bottom: 35px;">
+    <a href="../../blog.html" style="display: inline-block; padding: 10px 25px; background-color: #2c3e50; color: #ffffff; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 0.9em; transition: 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+      ⬅ Back to News Feed
+    </a>
+  </div>
+
+  <p class="share-text" style="color: #888; font-size: 0.9em; margin-bottom: 10px;">Share this Story:</p>
+  <div class="share-container" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
+    <a id="share-fb" target="_blank" style="text-decoration: none; color: #3b5998; font-weight: 500; cursor: pointer;">📘 Facebook</a>
+    <a id="share-x" target="_blank" style="text-decoration: none; color: #000000; font-weight: 500; cursor: pointer;">✖️ X (Twitter)</a>
+    <a id="share-li" target="_blank" style="text-decoration: none; color: #0077b5; font-weight: 500; cursor: pointer;">💼 LinkedIn</a>
+  </div>
+
+  <p style="font-size: 0.9em; color: #666; font-style: italic; margin-top: 20px;">Like this research update?</p>
   <div id="lyket-btn" data-lyket-type="like" data-lyket-namespace="soil-science-caraga" data-lyket-template="twitter"></div>
 </div>
 
 <script>
-  (function() {
-    var lyketBtn = document.getElementById('lyket-btn');
-    var pathId = window.location.pathname.split('/').filter(Boolean).pop() || "home";
-    lyketBtn.setAttribute('data-lyket-id', pathId);
-  })();
+window.addEventListener("load", function() {
+  var url = window.location.href;
+  var title = encodeURIComponent(document.title);
+  var postContent = document.querySelector('main.content') || document.querySelector('article');
+
+  // --- A. SETUP SHARE LINKS ---
+  document.getElementById('share-fb').href = "https://www.facebook.com/sharer/sharer.php?u=" + url;
+  document.getElementById('share-x').href = "https://twitter.com/intent/tweet?url=" + url + "&text=" + title;
+  document.getElementById('share-li').href = "https://www.linkedin.com/sharing/share-offsite/?url=" + url;
+
+  // --- B. CALCULATE READING TIME ---
+  if (postContent) {
+    var words = postContent.innerText.trim().split(/\s+/).length;
+    var time = Math.ceil(words / 200); 
+    document.getElementById('time-val').innerText = time;
+  }
+
+  // --- C. TELEPORT EVERYTHING ---
+  var header = document.querySelector('.quarto-title-meta'); 
+  
+  if (header) {
+    var badge = document.getElementById('reading-time-container');
+    header.parentNode.insertBefore(badge, header.nextSibling);
+    badge.style.display = 'block';
+  }
+
+  if (postContent) {
+    var widgets = document.getElementById('bottom-widgets');
+    postContent.appendChild(widgets);
+    widgets.style.display = 'block';
+  }
+
+  // --- D. UNIQUE LYKET ID ---
+  var pathId = window.location.pathname.split('/').filter(Boolean).pop() || "home";
+  document.getElementById('lyket-btn').setAttribute('data-lyket-id', pathId);
+});
 </script>
 
 <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_163e0eed8c09ddd45c012c0fa35c29"></script>
-
-<script>
-  window.addEventListener("load", function() {
-    var lyketWrapper = document.getElementById('lyket-wrapper');
-    var postContent = document.querySelector('main.content') || document.querySelector('article');
-    if (lyketWrapper && postContent) { postContent.appendChild(lyketWrapper); }
-  });
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
