@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#welcome-to-the-official-website-of-csu-soil-science-division" id="toc-welcome-to-the-official-website-of-csu-soil-science-division" class="nav-link active" data-scroll-target="#welcome-to-the-official-website-of-csu-soil-science-division">Welcome to the official website of CSU-Soil Science Division!</a></li>
-  <li><a href="#meet-the-team" id="toc-meet-the-team" class="nav-link" data-scroll-target="#meet-the-team">Meet the Team</a></li>
+  <li><a href="#meet-the-core-team" id="toc-meet-the-core-team" class="nav-link" data-scroll-target="#meet-the-core-team">Meet the Core Team</a></li>
   </ul>
 </nav>
     </div>
@@ -190,27 +190,129 @@ What to do here?
 </div>
 </div>
 </section>
-<section id="meet-the-team" class="level2">
-<h2 class="anchored" data-anchor-id="meet-the-team">Meet the Team</h2>
+<section id="meet-the-core-team" class="level2">
+<h2 class="anchored" data-anchor-id="meet-the-core-team">Meet the Core Team</h2>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+
+  /* ANCHOR KILLER */
+  .flip-card-front h4 a, .flip-card-back h5 a,
+  .flip-card-front h4 .anchorjs-link, .flip-card-back h5 .anchorjs-link,
+  .flip-card-front h4::after, .flip-card-back h5::after,
+  .flip-card-front h4::before, .flip-card-back h5::before {
+    display: none !important;
+    visibility: hidden !important;
+    content: none !important;
+  }
+
+  /* CONTAINER LOGIC */
+  .flip-card-front, .flip-card-back {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;    
+    justify-content: center !important; 
+    width: 100% !important;
+    height: 100% !important;
+    padding: 15px !important;           
+    box-sizing: border-box !important;
+    text-align: center !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .flip-card-front h4 {
+    font-family: "Dancing Script", cursive !important;
+    font-size: 1.8rem !important;      
+    color: #44546a !important;         
+    margin: 10px 0 0 0 !important;     
+  }
+
+  .flip-card-back {
+    overflow-y: auto; 
+    background-color: #2c3e50;
+    color: white;
+  }
+
+  .flip-card-back h5 {
+    font-family: system-ui, sans-serif !important;
+    font-weight: bold !important;
+    font-size: 1.1rem !important;
+    margin: 0 0 5px 0 !important;
+    color: #abdbe3;
+  }
+
+  .back-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 5px;
+    width: 90%;
+  }
+
+  .interest-text {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    padding: 0 5px;
+  }
+
+  /* Metrics Styling */
+  .metrics-box {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 0.75rem;
+    margin-bottom: 15px;
+    background: rgba(255,255,255,0.1);
+    padding: 8px 0;
+    border-radius: 8px;
+  }
+
+  .metric-item b {
+    display: block;
+    font-size: 1.1rem;
+    color: #fff;
+  }
+
+  .social-links a {
+    color: #abdbe3 !important;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin: 2px 8px;
+  }
+</style>
 <div class="grid">
 <div class="g-col-12 g-col-md-4 g-col-lg-3">
 <div class="flip-card">
 <div class="flip-card-inner">
 <div class="flip-card-front">
-<img src="[https://ui-avatars.com/api/?name=](https://ui-avatars.com/api/?name=)Sharyl&amp;background=random&amp;rounded=true" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+<img src="https://ui-avatars.com/api/?name=Sharyl&amp;background=random&amp;rounded=true" class="rounded-circle" style="width:130px; height:130px; object-fit:cover;">
 <h4 class="anchored">
 Sharyl
 </h4>
 </div>
 <div class="flip-card-back">
-<h5 class="mb-1 anchored">
+<h5 class="anchored">
 Instructor 1
 </h5>
-<p class="small">
-Sharyl Mae Daverao: soil chemistry, soil health
-</p>
-<hr style="width: 50%; border-color: white; margin: 10px auto;">
-<a href="mailto:" style="color: #abdbe3;"></a>
+<div class="back-name">
+Sharyl Mae M. Daverao
+</div>
+<div class="metrics-box">
+<div class="metric-item">
+<b>0</b>Research
+</div>
+<div class="metric-item">
+<b>0</b>Extension
+</div>
+</div>
+<div class="social-links">
+<a href="mailto:smdaverao@carsu.edu.ph">✉️ Email</a>
+</div>
 </div>
 </div>
 </div>
@@ -219,20 +321,29 @@ Sharyl Mae Daverao: soil chemistry, soil health
 <div class="flip-card">
 <div class="flip-card-inner">
 <div class="flip-card-front">
-<img src="[https://ui-avatars.com/api/?name=](https://ui-avatars.com/api/?name=)Hazel&amp;background=random&amp;rounded=true" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+<img src="https://ui-avatars.com/api/?name=Hazel&amp;background=random&amp;rounded=true" class="rounded-circle" style="width:130px; height:130px; object-fit:cover;">
 <h4 class="anchored">
 Hazel
 </h4>
 </div>
 <div class="flip-card-back">
-<h5 class="mb-1 anchored">
+<h5 class="anchored">
 Instructor 1
 </h5>
-<p class="small">
-Hazel Fuertes: soil chemistry, soil health
-</p>
-<hr style="width: 50%; border-color: white; margin: 10px auto;">
-<a href="mailto:" style="color: #abdbe3;"></a>
+<div class="back-name">
+Hazel D. Fuertes
+</div>
+<div class="metrics-box">
+<div class="metric-item">
+<b>0</b>Research
+</div>
+<div class="metric-item">
+<b>0</b>Extension
+</div>
+</div>
+<div class="social-links">
+<a href="mailto:hdfuertes@carsu.edu.ph">✉️ Email</a>
+</div>
 </div>
 </div>
 </div>
@@ -241,20 +352,29 @@ Hazel Fuertes: soil chemistry, soil health
 <div class="flip-card">
 <div class="flip-card-inner">
 <div class="flip-card-front">
-<img src="[https://ui-avatars.com/api/?name=](https://ui-avatars.com/api/?name=)Glenn&amp;background=random&amp;rounded=true" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+<img src="https://ui-avatars.com/api/?name=Glenn&amp;background=random&amp;rounded=true" class="rounded-circle" style="width:130px; height:130px; object-fit:cover;">
 <h4 class="anchored">
 Glenn
 </h4>
 </div>
 <div class="flip-card-back">
-<h5 class="mb-1 anchored">
+<h5 class="anchored">
 Associate Professor V
 </h5>
-<p class="small">
-Glenn Arthur Garcia: pedology, soil fertility
-</p>
-<hr style="width: 50%; border-color: white; margin: 10px auto;">
-<a href="mailto:" style="color: #abdbe3;"></a>
+<div class="back-name">
+Glenn Arthur A. Garcia
+</div>
+<div class="metrics-box">
+<div class="metric-item">
+<b>0</b>Research
+</div>
+<div class="metric-item">
+<b>0</b>Extension
+</div>
+</div>
+<div class="social-links">
+<a href="mailto:gaagarcia@carsu.edu.ph">✉️ Email</a>
+</div>
 </div>
 </div>
 </div>
@@ -263,20 +383,29 @@ Glenn Arthur Garcia: pedology, soil fertility
 <div class="flip-card">
 <div class="flip-card-inner">
 <div class="flip-card-front">
-<img src="[https://ui-avatars.com/api/?name=](https://ui-avatars.com/api/?name=)Lyka&amp;background=random&amp;rounded=true" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+<img src="https://ui-avatars.com/api/?name=Lyka&amp;background=random&amp;rounded=true" class="rounded-circle" style="width:130px; height:130px; object-fit:cover;">
 <h4 class="anchored">
 Lyka
 </h4>
 </div>
 <div class="flip-card-back">
-<h5 class="mb-1 anchored">
+<h5 class="anchored">
 Instructor 1
 </h5>
-<p class="small">
-Angelica Labiano: soil chemistry, soil physics
-</p>
-<hr style="width: 50%; border-color: white; margin: 10px auto;">
-<a href="mailto:" style="color: #abdbe3;"></a>
+<div class="back-name">
+Angelica L. Labiano
+</div>
+<div class="metrics-box">
+<div class="metric-item">
+<b>0</b>Research
+</div>
+<div class="metric-item">
+<b>0</b>Extension
+</div>
+</div>
+<div class="social-links">
+<a href="mailto:allabiano@carsu.edu.ph">✉️ Email</a>
+</div>
 </div>
 </div>
 </div>
@@ -285,20 +414,29 @@ Angelica Labiano: soil chemistry, soil physics
 <div class="flip-card">
 <div class="flip-card-inner">
 <div class="flip-card-front">
-<img src="[https://ui-avatars.com/api/?name=](https://ui-avatars.com/api/?name=)Ianil&amp;background=random&amp;rounded=true" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+<img src="https://ui-avatars.com/api/?name=Ianil&amp;background=random&amp;rounded=true" class="rounded-circle" style="width:130px; height:130px; object-fit:cover;">
 <h4 class="anchored">
 Ianil
 </h4>
 </div>
 <div class="flip-card-back">
-<h5 class="mb-1 anchored">
+<h5 class="anchored">
 Instructor 1
 </h5>
-<p class="small">
-Ianil Manguruban: soil fertility
-</p>
-<hr style="width: 50%; border-color: white; margin: 10px auto;">
-<a href="mailto:" style="color: #abdbe3;"></a>
+<div class="back-name">
+Ianil B. Manguruban
+</div>
+<div class="metrics-box">
+<div class="metric-item">
+<b>0</b>Research
+</div>
+<div class="metric-item">
+<b>0</b>Extension
+</div>
+</div>
+<div class="social-links">
+<a href="mailto:ibmanguruban@carsu.edu.ph">✉️ Email</a>
+</div>
 </div>
 </div>
 </div>
@@ -307,20 +445,29 @@ Ianil Manguruban: soil fertility
 <div class="flip-card">
 <div class="flip-card-inner">
 <div class="flip-card-front">
-<img src="[https://ui-avatars.com/api/?name=](https://ui-avatars.com/api/?name=)James&amp;background=random&amp;rounded=true" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+<img src="https://ui-avatars.com/api/?name=James&amp;background=random&amp;rounded=true" class="rounded-circle" style="width:130px; height:130px; object-fit:cover;">
 <h4 class="anchored">
 James
 </h4>
 </div>
 <div class="flip-card-back">
-<h5 class="mb-1 anchored">
+<h5 class="anchored">
 Associate Professor V
 </h5>
-<p class="small">
-Reuben James Rollon: soil microbiology, soil fertility
-</p>
-<hr style="width: 50%; border-color: white; margin: 10px auto;">
-<a href="mailto:" style="color: #abdbe3;"></a>
+<div class="back-name">
+Reuben James C. Rollon
+</div>
+<div class="metrics-box">
+<div class="metric-item">
+<b>0</b>Research
+</div>
+<div class="metric-item">
+<b>0</b>Extension
+</div>
+</div>
+<div class="social-links">
+<a href="mailto:rcrollon@carsu.edu.ph">✉️ Email</a>
+</div>
 </div>
 </div>
 </div>
@@ -329,20 +476,29 @@ Reuben James Rollon: soil microbiology, soil fertility
 <div class="flip-card">
 <div class="flip-card-inner">
 <div class="flip-card-front">
-<img src="[https://ui-avatars.com/api/?name=](https://ui-avatars.com/api/?name=)Frances&amp;background=random&amp;rounded=true" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+<img src="https://ui-avatars.com/api/?name=Frances&amp;background=random&amp;rounded=true" class="rounded-circle" style="width:130px; height:130px; object-fit:cover;">
 <h4 class="anchored">
 Frances
 </h4>
 </div>
 <div class="flip-card-back">
-<h5 class="mb-1 anchored">
+<h5 class="anchored">
 Assistant Professor I
 </h5>
-<p class="small">
-Frances Mae Pizon: soil chemistry, soil fertility
-</p>
-<hr style="width: 50%; border-color: white; margin: 10px auto;">
-<a href="mailto:" style="color: #abdbe3;"></a>
+<div class="back-name">
+Frances Mae Pizon
+</div>
+<div class="metrics-box">
+<div class="metric-item">
+<b>0</b>Research
+</div>
+<div class="metric-item">
+<b>0</b>Extension
+</div>
+</div>
+<div class="social-links">
+<a href="mailto:fpizon@carsu.edu.ph">✉️ Email</a>
+</div>
 </div>
 </div>
 </div>
@@ -351,63 +507,42 @@ Frances Mae Pizon: soil chemistry, soil fertility
 <div class="flip-card">
 <div class="flip-card-inner">
 <div class="flip-card-front">
-<img src="images/team/jude.jpeg" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+<img src="images/team/jude.jpeg" class="rounded-circle" style="width:130px; height:130px; object-fit:cover;">
 <h4 class="anchored">
 Jude
 </h4>
 </div>
 <div class="flip-card-back">
-<h5 class="mb-1 anchored">
+<h5 class="anchored">
 Assistant Professor IV
 </h5>
-<p class="small">
-Leo Jude Villasica: soil physics, soil health
-</p>
-<hr style="width: 50%; border-color: white; margin: 10px auto;">
-<a href="mailto:" style="color: #abdbe3;"></a>
+<div class="back-name">
+Leo Jude D. Villasica
+</div>
+<div class="interest-text">
+Soil Physics, Soil Health and Quality
+</div>
+<div class="metrics-box">
+<div class="metric-item">
+<b>2</b>Research
+</div>
+<div class="metric-item">
+<b>1</b>Extension
+</div>
+</div>
+<div class="social-links">
+<a href="mailto:ldvillasica@carsu.edu.ph">✉️ Email</a><a href="https://scholar.google.com/citations?user=D_EtD7sAAAAJ&amp;hl=en" target="_blank">🎓 Scholar</a><a href="https://www.researchgate.net/profile/Leo-Jude-Villasica?ev=hdr_xprf" target="_blank">RG ResearchGate</a>
 </div>
 </div>
 </div>
 </div>
 </div>
+</div>
 
 
-</section></main></div>
+</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -837,7 +972,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav>
- <!-- /content -->
+</div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">

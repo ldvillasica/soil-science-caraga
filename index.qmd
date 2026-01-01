@@ -12,7 +12,7 @@ You can check out our [News Feed](blog.qmd) to be updated of all our activities.
 You can also check here the profile of our faculty members!
 :::
 
-## Meet the Team
+## Meet the Core Team
 
 ```{r}
 #| echo: false
@@ -23,47 +23,156 @@ You can also check here the profile of our faculty members!
 library(googlesheets4)
 library(dplyr)
 
-# 1. SETUP: Tell R we are accessing a PUBLIC sheet (no login required)
+# 1. SETUP
 gs4_deauth()
-sheet_id <- "1reSknnI2NfaYGdCovLiXL7rgnjXCJjLsgrc5rQ39xyw" # Replace with your ID
-
-# 2. READ DATA: Pull the 'Staff' tab
-# Make sure your Google Sheet tab is named exactly "Staff"
+sheet_id <- "1reSknnI2NfaYGdCovLiXL7rgnjXCJjLsgrc5rQ39xyw" 
 team_data <- read_sheet(sheet_id, sheet = "Staff")
 
+# 2. CSS STYLING
+cat('
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+
+  /* ANCHOR KILLER */
+  .flip-card-front h4 a, .flip-card-back h5 a,
+  .flip-card-front h4 .anchorjs-link, .flip-card-back h5 .anchorjs-link,
+  .flip-card-front h4::after, .flip-card-back h5::after,
+  .flip-card-front h4::before, .flip-card-back h5::before {
+    display: none !important;
+    visibility: hidden !important;
+    content: none !important;
+  }
+
+  /* CONTAINER LOGIC */
+  .flip-card-front, .flip-card-back {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;    
+    justify-content: center !important; 
+    width: 100% !important;
+    height: 100% !important;
+    padding: 15px !important;           
+    box-sizing: border-box !important;
+    text-align: center !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .flip-card-front h4 {
+    font-family: "Dancing Script", cursive !important;
+    font-size: 1.8rem !important;      
+    color: #44546a !important;         
+    margin: 10px 0 0 0 !important;     
+  }
+
+  .flip-card-back {
+    overflow-y: auto; 
+    background-color: #2c3e50;
+    color: white;
+  }
+
+  .flip-card-back h5 {
+    font-family: system-ui, sans-serif !important;
+    font-weight: bold !important;
+    font-size: 1.1rem !important;
+    margin: 0 0 5px 0 !important;
+    color: #abdbe3;
+  }
+
+  .back-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 5px;
+    width: 90%;
+  }
+
+  .interest-text {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    padding: 0 5px;
+  }
+
+  /* Metrics Styling */
+  .metrics-box {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 0.75rem;
+    margin-bottom: 15px;
+    background: rgba(255,255,255,0.1);
+    padding: 8px 0;
+    border-radius: 8px;
+  }
+
+  .metric-item b {
+    display: block;
+    font-size: 1.1rem;
+    color: #fff;
+  }
+
+  .social-links a {
+    color: #abdbe3 !important;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin: 2px 8px;
+  }
+</style>
+')
+
+# 3. HTML GENERATION
 cat('<div class="grid">')
 
 for(i in 1:nrow(team_data)) {
   person <- team_data[i, ]
   
-  # Image check logic: Uses placeholder if image column is empty
+  # Image logic
   photo_path <- paste0("images/team/", person$Photo)
-  
-  if (is.na(person$Photo) || !file.exists(photo_path)) {
-    display_photo <- paste0("[https://ui-avatars.com/api/?name=](https://ui-avatars.com/api/?name=)", 
-                            URLencode(as.character(person$Name)), 
-                            "&background=random&rounded=true")
-  } else {
-    display_photo <- photo_path
-  }
+  display_photo <- if (is.na(person$Photo) || !file.exists(photo_path)) {
+    paste0("https://ui-avatars.com/api/?name=", URLencode(as.character(person$Name)), "&background=random&rounded=true")
+  } else { photo_path }
+
+  # Clean up counts (Replaces NA with 0 so the "TRUE" won't appear)
+  res_count <- if(is.na(person$"No. of Research Engagement")) "0" else person$"No. of Research Engagement"
+  ext_count <- if(is.na(person$"No. of Extension Engagement")) "0" else person$"No. of Extension Engagement"
 
   cat(paste0(
     '<div class="g-col-12 g-col-md-4 g-col-lg-3">',
       '<div class="flip-card">',
         '<div class="flip-card-inner">',
           
-          # FRONT: Photo and Name
+          # FRONT
           '<div class="flip-card-front">',
-            '<img src="', display_photo, '" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">',
+            '<img src="', display_photo, '" class="rounded-circle" style="width:130px; height:130px; object-fit:cover;">',
             '<h4>', person$Name, '</h4>',
           '</div>',
           
-          # BACK: Role, Bio, and Email
+          # BACK
           '<div class="flip-card-back">',
-            '<h5 class="mb-1">', person$Role, '</h5>', 
-            '<p class="small">', person$Bio, '</p>',
-            '<hr style="width: 50%; border-color: white; margin: 10px auto;">',
-            '<a href="mailto:', person$Email, '" style="color: #abdbe3;">', person$Email, '</a>',
+            '<h5>', person$Role, '</h5>',
+            '<div class="back-name">', person$"Full Name", '</div>',
+            
+            # Research Interest
+            if(!is.na(person$"Research Interest")) paste0('<div class="interest-text">', person$"Research Interest", '</div>'),
+
+            # Fixed Metrics Section
+            '<div class="metrics-box">',
+              '<div class="metric-item"><b>', res_count, '</b>Research</div>',
+              '<div class="metric-item"><b>', ext_count, '</b>Extension</div>',
+            '</div>',
+
+            # Links Section
+            '<div class="social-links">',
+              '<a href="mailto:', person$Email, '">✉️ Email</a>',
+              if(!is.na(person$"Google Scholar")) paste0('<a href="', person$"Google Scholar", '" target="_blank">🎓 Scholar</a>'),
+              if(!is.na(person$ResearchGate)) paste0('<a href="', person$ResearchGate, '" target="_blank">RG ResearchGate</a>'),
+            '</div>',
+            
           '</div>',
           
         '</div>',
