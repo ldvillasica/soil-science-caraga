@@ -327,3 +327,54 @@ a {
   margin-right: 5px;
   color: #3d2b1f;
 }
+
+/* Ensure everything in the footer stays perfectly centered vertically */
+.nav-footer-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px; /* Adds a nice gap between the icons, text, and logo */
+  flex-wrap: wrap; /* Ensures it looks good on mobile phones too */
+}
+
+.nav-footer-center i {
+  font-size: 1.2em; /* Makes the icons slightly larger to match the logo scale */
+}
+
+/* --- SIDEBAR LICENSE BRANDING --- */
+
+.custom-license {
+  font-size: 0.75rem;          /* Professional fine-print size */
+  color: #5d4037;               /* Medium Earthy Brown */
+  line-height: 1.4;
+  padding: 15px 10px;
+  border-top: 1px solid #e5e0d8; /* Separator line */
+  margin-top: 15px;
+}
+
+.custom-license a {
+  color: #3d2b1f !important;    /* Dark Brown for links */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.custom-license a:hover {
+  text-decoration: underline;
+  color: #8d6e63 !important;    /* Lighter brown on hover */
+}
+
+/* --- ICON STYLING --- */
+.cc-icons-row {
+  margin-top: 8px;
+  display: flex;
+  gap: 5px;
+  justify-content: flex-start;
+}
+
+.cc-icons-row img {
+  height: 18px;                 /* Consistent, clean height */
+  width: auto;
+  /* THE MAGIC FILTER: Turns black SVG icons into Soil Brown */
+  filter: sepia(1) saturate(3) hue-rotate(335deg) brightness(0.6);
+  opacity: 0.8;
+}
