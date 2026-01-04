@@ -1,0 +1,161 @@
+---
+title: "FieldX Applications"
+format: html
+editor: visual
+---
+
+------------------------------------------------------------------------
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: asis
+
+library(googlesheets4)
+library(dplyr)
+
+# 1. SETUP
+gs4_deauth()
+sheet_id <- "1reSknnI2NfaYGdCovLiXL7rgnjXCJjLsgrc5rQ39xyw" # Replace with your sheet ID
+app_data <- read_sheet(sheet_id, sheet = "Apps")
+
+# 2. CSS STYLING
+cat('
+<style>
+  /* 1. THE ANCHOR KILLER - Removes hidden link icons from the app titles */
+  .app-title a, 
+  .app-title .anchorjs-link, 
+  .app-title::after, 
+  .app-title::before {
+    display: none !important;
+    visibility: hidden !important;
+    content: none !important;
+  }
+
+  /* 2. GRID LAYOUT */
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+  }
+
+  /* 3. CARD STYLING */
+  .app-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #eee;
+  }
+
+  .app-card:hover { transform: translateY(-5px); }
+
+  .app-image-container {
+    width: 100%;
+    height: 200px;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+  }
+
+  .app-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .app-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Centering the text for a clean look */
+  }
+
+  .app-title { 
+    font-size: 1.3rem; 
+    font-weight: 700; 
+    margin: 0 0 10px 0 !important; 
+    color: #2c3e50;
+    width: 100% !important;
+  }
+
+  .app-description { 
+    font-size: 0.9rem; 
+    color: #666; 
+    margin-bottom: 20px; 
+    flex-grow: 1; 
+    line-height: 1.5;
+  }
+
+  /* 4. BUTTON GROUP */
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  .app-button {
+    flex: 1;
+    padding: 10px 5px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none !important;
+    transition: opacity 0.2s;
+  }
+
+  .btn-launch { background-color: #2c3e50; color: white !important; }
+  .btn-github { background-color: #f1f3f5; color: #2c3e50 !important; border: 1px solid #dee2e6; }
+  
+  .app-button:hover { opacity: 0.8; }
+</style>
+')
+
+# 3. GENERATE THE GRID
+cat('<div class="app-grid">')
+
+for(i in 1:nrow(app_data)) {
+  app <- app_data[i, ]
+  
+  # Image Logic (Manual > MShot > Placeholder)
+  img_src <- if(!is.na(app$Image)) {
+    app$Image 
+  } else if(!is.na(app$URL)) {
+    paste0("https://s0.wp.com/mshots/v1/", URLencode(as.character(app$URL)), "?w=400")
+  } else {
+    "https://via.placeholder.com/400x250?text=No+Preview"
+  }
+
+  cat(paste0(
+    '<div class="app-card">',
+      '<div class="app-image-container">',
+        '<img src="', img_src, '" class="app-image">',
+      '</div>',
+      '<div class="app-content">',
+        '<h3 class="app-title">', app$Title, '</h3>',
+        '<p class="app-description">', app$Description, '</p>',
+        
+        '<div class="button-group">',
+          '<a href="', app$URL, '" target="_blank" class="app-button btn-launch">Launch App 🚀</a>',
+          
+          if(!is.na(app$GitHub)) {
+            paste0('<a href="', app$GitHub, '" target="_blank" class="app-button btn-github">Source Code 💻</a>')
+          } else { "" },
+        '</div>',
+        
+      '</div>',
+    '</div>'
+  ))
+}
+
+cat('</div>')
+```

@@ -132,9 +132,29 @@
     "href": "index.html#meet-the-core-team",
     "title": "Soil Science Caraga",
     "section": "Meet the Core Team",
-    "text": "Meet the Core Team\n\n\n\n\n\n\n\n\nSharyl\n\n\n\n\nInstructor 1\n\n\nSharyl Mae M. Daverao\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nHazel\n\n\n\n\nInstructor 1\n\n\nHazel D. Fuertes\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nGlenn\n\n\n\n\nAssociate Professor V\n\n\nGlenn Arthur A. Garcia\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nLyka\n\n\n\n\nInstructor 1\n\n\nAngelica L. Labiano\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nIanil\n\n\n\n\nInstructor 1\n\n\nIanil B. Manguruban\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nJames\n\n\n\n\nAssociate Professor V\n\n\nReuben James C. Rollon\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nFrances\n\n\n\n\nAssistant Professor I\n\n\nFrances Mae Pizon\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nJude\n\n\n\n\nAssistant Professor IV\n\n\nLeo Jude D. Villasica\n\n\nSoil Physics, Soil Health and Quality\n\n\n\n2Research\n\n\n1Extension\n\n\n\n✉️ Email🎓 ScholarRG ResearchGate",
+    "text": "Meet the Core Team\n\n\n\n\n\n\n\n\nSharyl\n\n\n\n\nInstructor 1\n\n\nSharyl Mae M. Daverao\n\n\nSoil Chemistry, Soil Health and Quality\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nHazel\n\n\n\n\nInstructor 1\n\n\nHazel D. Fuertes\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nGlenn\n\n\n\n\nAssociate Professor V\n\n\nGlenn Arthur A. Garcia\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nLyka\n\n\n\n\nInstructor 1\n\n\nAngelica L. Labiano\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nIanil\n\n\n\n\nInstructor 1\n\n\nIanil B. Manguruban\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nJames\n\n\n\n\nAssociate Professor V\n\n\nReuben James C. Rollon\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nFrances\n\n\n\n\nAssistant Professor I\n\n\nFrances Mae Pizon\n\n\n\n0Research\n\n\n0Extension\n\n\n\n✉️ Email\n\n\n\n\n\n\n\n\n\n\n\nJude\n\n\n\n\nAssistant Professor IV\n\n\nLeo Jude D. Villasica\n\n\nSoil Physics, Soil Health and Quality\n\n\n\n2Research\n\n\n1Extension\n\n\n\n✉️ Email🎓 ScholarRG ResearchGate",
     "crumbs": [
       "Home"
+    ]
+  },
+  {
+    "objectID": "apps.html",
+    "href": "apps.html",
+    "title": "FieldX Applications",
+    "section": "",
+    "text": "Depth Function Plotter V1\n\n\nThis app is design to process data and visualize depth function plots for multiple parameter per soil profile\n\n\nLaunch App 🚀Source Code 💻\n\n\n\n\n\n\n\n\n\nSoil Texture Plotter\n\n\nThis app plots soil texture data in a ternary plot and also gives the data table with the soil textural classification\n\n\nLaunch App 🚀Source Code 💻\n\n\n\n\n\n\n\n\n\nSoil Profile Sketcher\n\n\nTake soil data with top and bottom depth columns and data on soil color (Hue, Value, Chroma) and converts it to simple yet informative soil profile sketches.\n\n\nLaunch App 🚀",
+    "crumbs": [
+      "FieldX Apps"
+    ]
+  },
+  {
+    "objectID": "apps.html#add-heading-here",
+    "href": "apps.html#add-heading-here",
+    "title": "FieldX Applications and Friends",
+    "section": "",
+    "text": "Add text here\n\n\n\n\n\n\n\n\n\nThis app is design to process data and visualize depth function plots for multiple parameter per soil profile\n\n\nLaunch App 🚀Source Code 💻\n\n\n\n\n\n\n\n\n\n\nThis app plots soil texture data in a ternary plot and also gives the data table with the soil textural classification\n\n\nLaunch App 🚀Source Code 💻",
+    "crumbs": [
+      "FieldX Apps"
     ]
   }
 ]
