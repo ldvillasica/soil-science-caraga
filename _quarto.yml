@@ -6,11 +6,11 @@ project:
 
 website:
   title: "Soil Science Division"
+  favicon: ssc.png
   bread-crumbs: true
   page-navigation: true
   sidebar:
     logo: ssc.png
-    favicon: soils.png
     search: true
     contents:
       - href: index.qmd
