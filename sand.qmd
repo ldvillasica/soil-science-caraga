@@ -1,5 +1,5 @@
 ---
-title: "Project SAND: Soil of Agusan del Norte"
+title: "Project SAND: Soils of Agusan del Norte"
 format:
   html:
     page-layout: full
