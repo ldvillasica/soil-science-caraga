@@ -156,5 +156,35 @@
     "crumbs": [
       "FieldX Apps"
     ]
+  },
+  {
+    "objectID": "sand.html",
+    "href": "sand.html",
+    "title": "Project SAND: Soil of Agusan del Norte",
+    "section": "",
+    "text": "Welcome to Project SAND. This page displays spatial field locations collected via QField joined with physical and chemical soil properties evaluated in the laboratory and a soil profile sketch generated using aqp package in R.",
+    "crumbs": [
+      "Project SAND"
+    ]
+  },
+  {
+    "objectID": "sand.html#project-overview",
+    "href": "sand.html#project-overview",
+    "title": "Project SAND: Soil of Agusan del Norte",
+    "section": "",
+    "text": "Welcome to Project SAND. This page displays spatial field locations collected via QField joined with physical and chemical soil properties evaluated in the laboratory and a soil profile sketch generated using aqp package in R.",
+    "crumbs": [
+      "Project SAND"
+    ]
+  },
+  {
+    "objectID": "sand.html#interactive-soil-map",
+    "href": "sand.html#interactive-soil-map",
+    "title": "Project SAND: Soil of Agusan del Norte",
+    "section": "Interactive Soil Map",
+    "text": "Interactive Soil Map\nClick on any sampling marker to inspect the associated laboratory parameters. Use the layer control in the top-right corner to toggle between Satellite Imagery and Standard Map views.",
+    "crumbs": [
+      "Project SAND"
+    ]
   }
 ]

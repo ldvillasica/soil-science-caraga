@@ -21,6 +21,8 @@ website:
         text: Research Dashboard
       - href: apps.qmd
         text: FieldX Apps
+      - href: sand.qmd
+        text: Project SAND
         
     footer: 
       - |
