@@ -10,11 +10,11 @@ format:
 
 Welcome to **Project SAND**. This page displays spatial field locations collected via **QField** joined with physical and chemical soil properties evaluated in the laboratory and a soil profile sketch generated using aqp package in R.
 
----
+------------------------------------------------------------------------
 
 ## Interactive Soil Map
 
-Click on any sampling marker to inspect the associated laboratory parameters. Use the layer control in the top-right corner to toggle between Satellite Imagery and Standard Map views.
+Click on any sampling marker to inspect the associated laboratory parameters. Use the layer control in the top-right corner to toggle between Satellite Imagery and Standard Map views. **(atm: sample data)**
 
 ```{r setup, include=FALSE}
 # Load required libraries silently
