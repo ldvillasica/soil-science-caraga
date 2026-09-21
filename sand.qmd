@@ -53,24 +53,37 @@ if (is.null(soil_data) || nrow(soil_data) == 0) {
     # Path on disk
     local_file_path <- file.path("images", "profiles", paste0(sample_id, ".png"))
     
-    # Header
+    # 1. Header & Primary Identification
     html <- paste0(
       "<div style='max-width: 250px; font-family: sans-serif;'>",
       "<strong style='font-size: 15px; color: #2c3e50;'>Sample ID: ", sample_id, "</strong>",
       "<hr style='margin: 6px 0; border: 0; border-top: 1px solid #ccc;'>"
     )
     
-    # Add optional lab fields
-    if ("pH" %in% names(row) && !is.na(row["pH"])) {
-      html <- paste0(html, "<b>pH: </b>", row["pH"], "<br>")
-    }
-    if ("Organic_Matter" %in% names(row) && !is.na(row["Organic_Matter"])) {
-      html <- paste0(html, "<b>Organic Matter: </b>", row["Organic_Matter"], "%<br>")
+    # Add Location if present in row
+    if ("Full_Location" %in% names(row) && !is.na(row["Full_Location"])) {
+      html <- paste0(html, "<b>Location: </b>", row["Full_Location"], "<br>")
+    } else if ("Barangay" %in% names(row) && !is.na(row["Barangay"])) {
+      html <- paste0(html, "<b>Barangay: </b>", row["Barangay"], "<br>")
     }
     
-    # Base64 embedding logic
+    # 2. DYNAMIC LOOP FOR ALL LAB PARAMETERS
+    # Non-lab/system columns to exclude from printing
+    skip_cols <- c("Sample_ID", "Barangay", "Full_Location", "geometry", "geom")
+    lab_cols  <- setdiff(names(row), skip_cols)
+    
+    for (col in lab_cols) {
+      val <- row[col]
+      # Only append parameters that have actual values (skips missing/NA lab values)
+      if (!is.na(val) && trimws(as.character(val)) != "") {
+        # Replace underscores with spaces for clean labels (e.g., Organic_Matter -> Organic Matter)
+        pretty_name <- gsub("_", " ", col)
+        html <- paste0(html, "<b>", pretty_name, ": </b>", val, "<br>")
+      }
+    }
+    
+    # 3. Base64 Profile Sketch Image Embedding
     if (file.exists(local_file_path)) {
-      # Read image file and convert directly to a raw Base64 data string
       img_raw <- base64enc::dataURI(file = local_file_path, mime = "image/png")
       
       html <- paste0(
@@ -81,7 +94,7 @@ if (is.null(soil_data) || nrow(soil_data) == 0) {
         "</div>"
       )
     } else {
-      html <- paste0(html, "<br><em style='color: #888;'>No profile sketch found (Checked: ", local_file_path, ")</em>")
+      html <- paste0(html, "<br><em style='color: #888; font-size: 11px;'>No profile sketch found (Checked: ", local_file_path, ")</em>")
     }
     
     html <- paste0(html, "</div>")
@@ -106,5 +119,61 @@ if (is.null(soil_data) || nrow(soil_data) == 0) {
       options = layersControlOptions(collapsed = FALSE)
     ) %>%
     addScaleBar(position = "bottomleft")
+}
+```
+
+## Summary Information per Location
+
+```{r render_table, echo=FALSE, message=FALSE, warning=FALSE}
+library(sf)
+library(DT)
+library(dplyr)
+
+if (!is.null(soil_data) && nrow(soil_data) > 0) {
+  
+  # 1. Determine location grouping column (Barangay or Location)
+  group_col <- if ("Barangay" %in% names(soil_data)) "Barangay" else "Full_Location"
+  
+  # 2. Drop spatial geometry and calculate averages per location dynamically
+  location_summary <- soil_data %>%
+    st_drop_geometry() %>%
+    group_by(.data[[group_col]]) %>%
+    summarise(
+      `Total Samples` = n(),
+      # Calculates mean across ALL numeric lab parameters, rounded to 2 decimal places
+      across(
+        where(is.numeric), 
+        ~ round(mean(.x, na.rm = TRUE), 2)
+      ),
+      .groups = "drop"
+    )
+  
+  # 3. Clean column names (replaces underscores with spaces)
+  colnames(location_summary) <- gsub("_", " ", colnames(location_summary))
+  
+  # 4. Render interactive DataTables widget
+  datatable(
+    location_summary,
+    filter = "top",                  # Adds search/filter boxes per column
+    rownames = FALSE,                # Removes default R row numbers
+    extensions = 'Buttons',          # Enables CSV/Excel download
+    options = list(
+      pageLength = 10,
+      autoWidth = TRUE,
+      scrollX = TRUE,                # Allows horizontal scrolling for many parameters
+      dom = 'Bfrtip',
+      buttons = list(
+        'copy', 
+        list(extend = 'csv', filename = 'Soil_Summary_By_Location'),
+        list(extend = 'excel', filename = 'Soil_Summary_By_Location')
+      )
+    )
+  )
+
+} else {
+  htmltools::div(
+    style = "padding: 15px; color: #856404; background-color: #fff3cd; border-radius: 4px;",
+    "No summary data available to render."
+  )
 }
 ```
