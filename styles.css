@@ -1,0 +1,380 @@
+/* Import fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;800&display=swap');
+
+/* Main body text */
+body {
+  font-family: 'Avenir', sans-serif;
+  color: #333;
+}
+
+/* Headers */
+h1, h2, h3, h4, .navbar-brand {
+  font-family: 'Avenir', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.5px; /* Makes sans-serif headers look tighter/cleaner */
+  color: #1a1a1a;
+}
+
+/* Make links look clean */
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+```css
+/* Staff Card Styling */
+.card {
+  transition: transform 0.2s ease-in-out;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Card lifts up when hovered */
+}
+
+.card-title {
+  font-family: 'Avenir', sans-serif; /* Your sans-serif font */
+  margin-bottom: 0.2rem;
+}
+
+.card-text {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* The flip card container */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 350px; /* Adjust height as needed */
+  perspective: 1000px; /* Gives the 3D effect */
+  margin-bottom: 20px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Style the front side */
+.flip-card-front {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #2c3e50; /* Matches your hero color */
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Style the footer text */
+.nav-footer-center {
+  font-size: 0.9em;
+  color: #555;
+  letter-spacing: 0.5px;
+}
+
+/* Optional: Make the logo slightly "grow" when hovered in the footer */
+.nav-footer-center img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+/* --- LYKET BUTTON STYLING --- */
+#lyket-wrapper {
+  clear: both;
+  display: block;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto !important;
+}
+
+/* This targets the Lyket button specifically */
+[data-lyket-type="like"] {
+  display: inline-block !important;
+  cursor: pointer !important;
+  margin-top: 10px;
+}
+
+/* Optional: Make the "Like" text a bit nicer */
+#lyket-wrapper p {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #2c3e50; /* Matches your professional theme */
+}
+
+/* --- 1. READING TIME BADGE --- */
+#reading-time-badge {
+  font-size: 0.85em;
+  color: #666;
+  background: #f4f4f4;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+/* --- 2. SOCIAL SHARE BUTTONS --- */
+.share-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.share-link {
+  color: #555;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.2s;
+}
+
+.share-link:hover {
+  color: #007bff; /* Changes to blue on hover */
+}
+
+.share-text {
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Navigation Row (Top and Bottom) */
+.post-nav-header {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.post-nav-footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.btn-news-feed {
+  font-size: 0.9em;
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-news-feed:hover {
+  color: #007bff;
+}
+
+/* --- RETURN TO FEED BUTTON --- */
+.feed-nav-container {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.btn-feed {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #2c3e50; /* Professional Navy */
+  color: #ffffff !important;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  border: none;
+}
+
+.btn-feed:hover {
+  background-color: #34495e;
+  transform: translateY(-2px);
+  color: #ffffff !important;
+}
+
+.btn-feed:active {
+  transform: translateY(0);
+}
+
+/* --- NEWS FEED / GRID STYLING --- */
+
+/* 1. Fix the Title: Remove All-Caps, Increase Size, and Add Color */
+.quarto-listing-container-grid .listing-title {
+  text-transform: none !important; /* This stops the all-caps */
+  font-weight: 700 !important;    /* Makes it bold/emphasized */
+  font-size: 1.3rem !important;   /* Larger heading size */
+  color: #3d2b1f !important;      /* Rich Dark Brown */
+  line-height: 1.2;
+  margin-top: 10px;
+  display: block;
+}
+
+/* 2. Style the Card specifically */
+.quarto-grid-item {
+  border: 1px solid #e5e0d8 !important; /* Light earthy border */
+  border-radius: 8px !important;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+  background-color: #ffffff;
+}
+
+/* 3. Hover Effect: Make the card "lift" when mouse is over it */
+.quarto-grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(61, 43, 31, 0.1); /* Brownish shadow */
+  border-color: #3d2b1f !important;
+}
+
+/* 4. Style the Metadata (Date and Author) */
+.listing-author, .listing-date {
+  color: #7d6b5d !important; /* Muted brown-gray */
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 5. Style the Categories (the small pills) */
+.listing-categories .listing-category {
+  background-color: #f0ebe5 !important; /* Light sand color */
+  color: #5d4037 !important;           /* Medium brown text */
+  border: 1px solid #dcd3c9 !important;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+/* --- FIX CONTENT PREVIEW (DESCRIPTION) --- */
+
+.quarto-listing-container-grid .listing-description, 
+.quarto-listing-container-grid .listing-subtitle {
+  text-transform: none !important;    /* Forces normal sentence case */
+  font-variant: normal !important;    /* Disables "Small Caps" if active */
+  color: #5d4037 !important;          /* Medium Earthy Brown */
+  font-size: 0.95rem !important;      /* Slightly smaller than the title */
+  line-height: 1.5;                   /* Better readability for paragraphs */
+  margin-top: 8px;
+  display: block;
+}
+
+/* Optional: Make the "Read More" or text links brown too */
+.quarto-listing-container-grid a {
+  color: #3d2b1f; 
+  text-decoration: none;
+}
+
+/* --- SIDEBAR ADDRESS STYLING --- */
+.address-sidebar {
+  font-size: 0.82em;          /* Slightly smaller for a footer look */
+  color: #5d4037;             /* Medium Brown */
+  line-height: 1.5;
+  padding: 15px 10px;
+  border-top: 1px solid #e5e0d8; /* Light earth-tone separator */
+  margin-top: 20px;
+}
+
+.address-sidebar strong {
+  color: #3d2b1f;             /* Dark Brown for the name */
+  display: block;
+  margin-bottom: 5px;
+}
+
+.address-sidebar a {
+  color: #8d6e63;             /* Lighter brown for the link */
+  text-decoration: underline;
+}
+
+.address-sidebar a:hover {
+  color: #3d2b1f;
+}
+
+/* Optional: Style the Bootstrap icon */
+.address-sidebar i {
+  margin-right: 5px;
+  color: #3d2b1f;
+}
+
+/* Ensure everything in the footer stays perfectly centered vertically */
+.nav-footer-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px; /* Adds a nice gap between the icons, text, and logo */
+  flex-wrap: wrap; /* Ensures it looks good on mobile phones too */
+}
+
+.nav-footer-center i {
+  font-size: 1.2em; /* Makes the icons slightly larger to match the logo scale */
+}
+
+/* --- SIDEBAR LICENSE BRANDING --- */
+
+.custom-license {
+  font-size: 0.75rem;          /* Professional fine-print size */
+  color: #5d4037;               /* Medium Earthy Brown */
+  line-height: 1.4;
+  padding: 15px 10px;
+  border-top: 1px solid #e5e0d8; /* Separator line */
+  margin-top: 15px;
+}
+
+.custom-license a {
+  color: #3d2b1f !important;    /* Dark Brown for links */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.custom-license a:hover {
+  text-decoration: underline;
+  color: #8d6e63 !important;    /* Lighter brown on hover */
+}
+
+/* --- ICON STYLING --- */
+.cc-icons-row {
+  margin-top: 8px;
+  display: flex;
+  gap: 5px;
+  justify-content: flex-start;
+}
+
+.cc-icons-row img {
+  height: 18px;                 /* Consistent, clean height */
+  width: auto;
+  /* THE MAGIC FILTER: Turns black SVG icons into Soil Brown */
+  filter: sepia(1) saturate(3) hue-rotate(335deg) brightness(0.6);
+  opacity: 0.8;
+}
